@@ -41,10 +41,9 @@
         background-color: #333;
         margin: .2rem 0;
       }
-      .menu-text {
-        font-size: 1rem;
-        margin: 0;
-        text-align: center;
+      .menu-list {
+        list-style: none;
+        padding: 0;
       }
       .amp-close-image {
         float: right;
@@ -57,59 +56,279 @@
           display: none;
         }
       }
+      button {
+        font-size: 1.2rem;
+        margin: 1rem;
+        font-weight: 700;
+      }
+      .list-overflow {
+    width: 160px;
+    margin-left: auto;
+  }
+  #amp-list-placeholder div[role=list] {
+    margin: 1rem;
+  }
+
+  .products {
+      display: block;
+      height: 100px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      background: #fff;
+      border-radius: 2px;
+      margin-bottom: 35px;
+      position: relative;
+    }
+
+  .products amp-img {
+      float: left;
+      margin-right: 16px;
+  }
+
+  #amp-list-placeholder ul.results {
+      list-style: none;
+      overflow: auto;
+      margin-left: 1rem;
+      padding: 0;
+    }
+
+  #amp-list-placeholder ul.results li {
+         height: 100px;
+         background: #fff;
+         border-radius: 2px;
+         margin-bottom: 15px;
+         position: relative;
+         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  #amp-list-placeholder div[placeholder] ul.results li {
+      background:
+        linear-gradient(90deg, rgba(211, 211, 211, 0) 0, rgba(211, 211, 211, 0.8) 50%, rgba(211, 211, 211, 0) 100%),
+        linear-gradient(#cccccc 100%, transparent 0),
+        linear-gradient(#cccccc 100%, transparent 0),
+        linear-gradient(#cccccc 100%, transparent 0),
+        linear-gradient(#cccccc 100%, transparent 0);
+      background-size:
+        200px 100px,
+        150px 100px,
+        100px 10px,
+        100px 10px,
+        100px 10px;
+      background-position:
+        -150% 0,
+        0 0,
+        166px 4px,
+        166px 29px,
+        166px 53px;
+      background-repeat: no-repeat;
+      -webkit-animation: loading 1.5s infinite;
+      animation: loading 1.5s infinite;
+    }
+
+    @-webkit-keyframes loading {
+      to {
+        background-position: 350% 0, 0 0,
+        166px 4px,
+        166px 29px,
+        166px 53px;
+      }
+    }
+
+     @keyframes loading {
+       to {
+         background-position: 350% 0, 0 0,
+         166px 4px,
+         166px 29px,
+         166px 53px;
+       }
+     }
+     h1 {
+       padding: 14px;
+     }
     </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<!-- <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js"></script> -->
+<!-- <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script> -->
+<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header>
+
+<!-- <amp-img src="https://loremflickr.com/300/200" alt="An image"
+  layout="responsive" width="300" height="200">
+</amp-img> -->
+
+<!-- <p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.</p> -->
+
+<!-- <amp-img src="https://loremflickr.com/300/200" alt="An image"
+  layout="responsive" width="300" height="200">
+  <div fallback>Connect to the internet to view...</div>
+  <noscript>
+    <img src="https://loremflickr.com/300/200" alt="An image"
+      width="300" height="200"> 
+  </noscript>
+</amp-img> -->
+
+<!-- <amp-carousel height="300" layout="fixed-height" type="slides"
+  autoplay delay="3000">
+  <amp-img src="https://loremflickr.com/300/200?random=1"
+    width="300" height="200" alt="Random image 1"></amp-img>
+  <p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.</p>
+  <amp-video width="300" height="200" layout="responsive"
+    autoplay
+    src="https://www.ampbyexample.com/video/tokyo.mp4"
+    poster="https://www.ampbyexample.com/img/tokyo.jpg">
+  </amp-video>
+</amp-carousel> -->
+
+
+<!-- <amp-video width="480" height="270" layout="responsive"
+  src="https://www.ampbyexample.com/video/tokyo.mp4"
+  poster="https://www.ampbyexample.com/img/tokyo.jpg"
+  controls rotate-to-fullscreen>
+  <div fallback>
+    <p>Your browser doesn't support HTML5 video.</p>
+  </div>
+  <source type="video/webm"
+    src="https://www.ampbyexample.com/video/tokyo.webm">
+</amp-video> -->
+
+<!-- <amp-youtube
+  width="358" height="204" layout="responsive"
+  id="myLiveChannel"
+  data-live-channelid="UCB8Kb4pxYzsDsHxzBfnid4Q">
+  <amp-img
+    src="https://i.ytimg.com/vi/Wm1fWz-7nLQ/hqdefault_live.jpg"
+    placeholder
+    layout="fill" />
+</amp-youtube> -->
+
+<!-- <amp-facebook width="552" height="310"
+  layout="responsive"
+  data-href="https://www.facebook.com/ParksCanada/posts/1712989015384373">
+</amp-facebook> -->
+
+<!-- <amp-twitter
+  width="375" height="472" layout="responsive"
+  data-tweetid="638793490521001985">
+</amp-twitter> -->
+
+<!-- <form method="post" target="_top" action-xhr="/components/amp-form/submit-xhr">
+  <p>Form Submission with Page Update</p>
+  <div>
+    <input type="text" name="name"
+      placeholder="Name..." required>
+    <input type="email" name="email"
+      placeholder="Email..." required>
+  </div>
+  <input type="submit" value="Subscribe">
+  <div submit-success>
+    <template type="amp-mustache">
+      Success! Thanks {{name}} for trying the
+    </template>
+  </div>
+  <div submit-error>
+    <template type="amp-mustache">
+      Error! Thanks {{name}} for trying the
+    </template>
+  </div>
+</form> -->
+
+<!-- <amp-timeago layout="fixed" width="160" height="20"
+  datetime="2018-05-20T10:37:33.809Z"
+  locale="en">#</amp-timeago> -->
+
+<!-- <amp-list id="amp-list-placeholder" noloading
+  width="auto" height="600" layout="fixed-height"
+  src="https://ampbyexample.com/samples_templates/slow-json-with-items/?delay=1000">
+  <div placeholder>
+    <ul class="results">
+      <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+  <template type="amp-mustache">
+    <div class="products">
+      <amp-img width="150" height="100" alt="{{name}}"
+        src="https://ampbyexample.com{{img}}"></amp-img>
+      <p class="name">{{name}}</p>
+      <p class="star">{{{stars}}}</p>
+      <p class="price">£{{price}}</p>
+    </div>
+  </template>
+</amp-list> -->
+
+<amp-state id="state" [src]="remoteState">
+  <script type="application/json">
+    {
+      "name": "General Leia Organa-Solo"
+    }
+  </script>
+</amp-state>
+
+<h1 [text]="state.name">General Leia Organa-Solo</h1>
+
+<button
+  on="tap:sidebar.toggle"
+  on="tap:AMP.setState({remoteState: 'https://swapi.co/api/people/' + ((random() * 10).toFixed() * 5) + '/?format=json'})">
+  Random Star Wars Character
+</button>
+
+      <!-- <header>
       <h1 class="title">LINGsCARS.com</h1>
 
-      <div on="tap:sidebar-right.toggle" class="menu" role="menu" tabindex="0">
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-        <p class="menu-text">Menu</p>
+      <div on="tap:sidebar.toggle" class="menu" role="menu" tabindex="0">
+        <amp-img class=""
+          src="https://images.lingscars.com/images/mobile/game/ling-mad-160.gif"
+          width="40"
+          height="40"
+          alt="Menu"></amp-img>
       </div>
-    </header>
+    </header> -->
 
-    <amp-sidebar id="sidebar-right"
+    <!-- <amp-sidebar id="sidebar"
       layout="nodisplay"
       side="right">
       <amp-img class="amp-close-image"
         src="https://www.ampbyexample.com/img/ic_close_black_18dp_2x.png"
         width="40"
         height="40"
-        alt="close sidebar"
-        on="tap:sidebar-right.close"
+        alt="Close sidebar"
+        on="tap:sidebar.close"
         role="button"
         tabindex="0"></amp-img>
       <nav toolbar="(min-width: 784px)" toolbar-target="menu-bar">
-        <ul>
+        <ul class="menu-list">
           <li>
-            <a href="/">Home</a>
+            <button>
+              <a href="/">Home</a>
+            </button>
           </li>
-          <li> Nav item 1</li>
+          <li>
+            <button>
+              Nav item 1
+            </button>
+          </li>
         </ul>
       </nav>
     </amp-sidebar>
     
-    <!-- Responsive menubar -->
     <div id="menu-bar">
-    </div>
+    </div> -->
 
-    <amp-list width="auto" height="400" layout="fixed-height" src="https://www.ampbyexample.com/json/product-single-item.json">
-      <template type="amp-mustache">
-        <amp-carousel height="400" layout="fixed-height" type="slides" autoplay delay="2000">
-          {{#values}}
-            <amp-img src="https://www.ampbyexample.com{{img}}" layout="fixed" width="400" height="400" alt="{{name}}"></amp-img>
-          {{/values}}
-        </amp-carousel>
-      </template>
-    </amp-list>
+<!-- <amp-list width="auto" height="400" layout="fixed-height" src="https://www.ampbyexample.com/json/product-single-item.json">
+  <template type="amp-mustache">
+    <amp-carousel height="400" layout="fixed-height" type="slides" autoplay delay="2000">
+      {{#values}}
+        <amp-img src="https://www.ampbyexample.com{{img}}" layout="fixed" width="400" height="400" alt="{{name}}"></amp-img>
+      {{/values}}
+    </amp-carousel>
+  </template>
+</amp-list> -->
   </body>
 </html>
